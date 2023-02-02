@@ -49,19 +49,14 @@
         border-right: solid;
         padding-right: 10px;
 
-        img {
-          width: 15px;
-          margin: 2px 10px;
-        }
       }
 
       .mail {
         display: flex;
         justify-content: center;
-
-        img {
-          width: 15px;
-          margin: 2px 10px;
+        margin-left: 5px;
+        p{
+          margin-left: 5px;
         }
       }
     }

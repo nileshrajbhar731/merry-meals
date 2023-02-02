@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function VerificationPending() {
@@ -14,9 +15,10 @@ function VerificationPending() {
         Once your profile is verified you will be able to login.
         </p>
         <br></br>
-        <a href='/login'>
+        {/* <a href='/login'>
         <button>Go Back</button>
-        </a>
+        </a> */}
+        <Link href="/login"><button>Go Back</button></Link>
     </div>
     </div>
   )

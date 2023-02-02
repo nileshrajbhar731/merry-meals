@@ -2,6 +2,8 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "./layout.module.scss";
+import Image from 'next/image';
+import Link from 'next/link';
 
 import { getUserType,BASE_URL } from "../../helper/utils.helper";
 
@@ -249,12 +251,12 @@ export default function Header() {
         <div className={`${styles.main}`}>
           <div className={`${styles.row}`}>
             <div className={`${styles.phone}`}>
-              <img src="/icons/phone-solid.svg" alt="img" />
+              <Image src="/icons/phone-solid.svg" alt="img" width={"15px"} height={"15px"}  />
               <p>+918828283744</p>
             </div>
 
             <div className={`${styles.mail}`}>
-              <img src="/icons/envelope-solid.svg" alt="img" />
+              <Image src="/icons/envelope-solid.svg" alt="img" width={"15px"} height={"15px"} />
               <p>support@merrymeal.com</p>
             </div>
           </div>
@@ -267,16 +269,16 @@ export default function Header() {
 
       <div className={`${styles.container_main}`}>
         <div className={`${styles.logo}`}>
-          <a href="/">
-            <img src="/icons/logo.png" alt="img" />
-          </a>
+          <Link href="/">
+            <Image src="/icons/logo.png" alt="img" width={"120px"}  height={"20px"}/>
+          </Link>
 
           <div className={`${styles.nav}`}>
             <div className={`${styles.list}`}>
               {res?.length != 0 ? (
                 <>
                   <li>
-                    <a
+                    <Link
                       href={
                         isCaregiver
                           ? "caregiver-dashboard"
@@ -293,12 +295,12 @@ export default function Header() {
                       {isCaregiver
                         ? "Caregiver Dashboard"
                         : `${getUserType()} Dashboard`}
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="/login" onClick={logOut} style={{ color: "red" }}>
+                    <Link href="/login" onClick={logOut} style={{ color: "red" }}>
                       Logout
-                    </a>
+                    </Link>
                   </li>
 
                   <div
@@ -307,7 +309,7 @@ export default function Header() {
                     style={{ cursor: "pointer" }}
                   >
                     <div className={`${styles.profileImg}`}>
-                      <img
+                      <Image
                         src={
                           res?.photoUrl
                             ? `${BASE_URL}${res?.photoUrl}`
@@ -330,49 +332,49 @@ export default function Header() {
                       router.asPath?.includes(" ") ? styles.active : ""
                     }`}
                   >
-                    <a href="/">Home</a>
+                    <Link href="/">Home</Link>
                   </li>
                   <li
                     className={`${
                       router.asPath?.includes("about") ? styles.active : ""
                     }`}
                   >
-                    <a href="/about">About Us</a>
+                    <Link href="/about">About Us</Link>
                   </li>
                   <li
                     className={`${
                       router.asPath?.includes("contact") ? styles.active : ""
                     }`}
                   >
-                    <a href="/contact">Contact Us</a>
+                    <Link href="/contact">Contact Us</Link>
                   </li>
                   <li
                     className={`${
                       router.asPath?.includes("member") ? styles.active : ""
                     }`}
                   >
-                    <a href="/member-register">Member</a>
+                    <Link href="/member-register">Member</Link>
                   </li>
                   <li
                     className={`${
                       router.asPath?.includes("cargiver") ? styles.active : ""
                     }`}
                   >
-                    <a href="/caregiver-register">Caregiver</a>
+                    <Link href="/caregiver-register">Caregiver</Link>
                   </li>
                   <li
                     className={`${
                       router.asPath?.includes("partner") ? styles.active : ""
                     }`}
                   >
-                    <a href="/partner-register">Partner</a>
+                    <Link href="/partner-register">Partner</Link>
                   </li>
                   <li
                     className={`${
                       router.asPath?.includes("rider") ? styles.active : ""
                     }`}
                   >
-                    <a href="/rider-register">Rider</a>
+                    <Link href="/rider-register">Rider</Link>
                   </li>
                   {/* <li
                     className={`${
@@ -386,7 +388,7 @@ export default function Header() {
                       router.asPath?.includes("login") ? styles.active : ""
                     }`}
                   >
-                    <a href="/login">Login</a>
+                    <Link href="/login">Login</Link>
                   </li>
                 </>
               )}
@@ -502,7 +504,7 @@ export default function Header() {
                   </figcaption>
                 )}
 
-                <img
+                <Image
                   src={
                     res?.photoUrl
                       ? `${BASE_URL}${res?.photoUrl}`

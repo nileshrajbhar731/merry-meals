@@ -166,12 +166,13 @@ export default function RiderDashboardPage() {
       <h1>Selected Delivery</h1>
       <div className="selectedMeals">
         {selectedDeliveries?.length ? (
-          selectedDeliveries?.map((e) => {
+          selectedDeliveries?.map((e,key) => {
              console.log(e,riderStore);
              if(e?.deliveredBy?.userRoleId !== riderStore?.userRoleId?._id)return null
             return (
               <>
                 <LongCard
+                key={key}
                   imgSrc={`${BASE_URL}${e?.mealId?.["photoUrl"]}`}
                   imgAlt={e.mealId?.["photoUrl"]}
                   mealName={e.mealId?.["name"]}
@@ -243,13 +244,14 @@ export default function RiderDashboardPage() {
         console.log(availableDeliveries)
       }
         {availableDeliveries?.length ? (
-          availableDeliveries?.map((e) => {
+          availableDeliveries?.map((e,key) => {
             console.log(e);
             // console.log(partnerStore?.userRoleId?.rider?.length);
             const name = e.orderBy["firstName"] + " " + e.orderBy["lastName"];
             return (
               <div>
                 <Card
+                key={key}
                   imgSrc={`${BASE_URL}${e.mealId["photoUrl"]}`}
                   imgAlt={e.mealId["photoUrl"]}
                   mealName={e.mealId["name"]}

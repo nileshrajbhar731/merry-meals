@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "../components/common/loader/Loader";
 import { getUserType, BASE_URL } from "../helper/utils.helper";
 
-export default function login() {
+export default function Login() {
   const [data, setData] = useState({
     email: "",
     password: "",

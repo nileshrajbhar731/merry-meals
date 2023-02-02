@@ -45,31 +45,30 @@ export default function PartnerDashboardPage() {
     // console.log(orders);
 
     setSelectedOrders(
-      orders?.filter((order) => order?.status === ORDER_STATUS[1]),
+      orders?.filter((order) => order?.status === ORDER_STATUS[1])
     );
     setAvailableOrders(
-      orders?.filter((order) => order?.status === ORDER_STATUS[0]),
+      orders?.filter((order) => order?.status === ORDER_STATUS[0])
     );
     setOrderHistory(
       orders?.filter(
         (order) =>
           order?.preparedBy?._id === partnerStore?._id &&
-          order?.status !== ORDER_STATUS[1],
-      ),
+          order?.status !== ORDER_STATUS[1]
+      )
     );
   }, [orders, partnerStore]);
-
-
 
   return (
     <div className="dashboard">
       <h1>Selected Meals</h1>
       <div className="selectedMeals">
         {selectedOrders?.length ? (
-          selectedOrders?.map((e) => {
+          selectedOrders?.map((e, key) => {
             return (
               <>
                 <LongCard
+                  key={key}
                   imgSrc={`${BASE_URL}${e?.mealId?.["photoUrl"]}`}
                   imgAlt={e.mealId?.["photoUrl"]}
                   mealName={e.mealId?.["name"]}
@@ -99,7 +98,7 @@ export default function PartnerDashboardPage() {
                         console.log(error);
                         alert(
                           error?.response?.data?.error ||
-                            "Something went wrong!",
+                            "Something went wrong!"
                         );
                       });
                   }}
@@ -116,14 +115,19 @@ export default function PartnerDashboardPage() {
       <h1>Avilable Meals Requests</h1>
       <div className="availableMeals row">
         {availableOrders?.length ? (
-          availableOrders?.map((e) => {
-            {/* console.log(e.orderBy); */}
-            {/* console.log(partnerStore?.userRoleId?.rider?.length); */}
+          availableOrders?.map((e, key) => {
+            {
+              /* console.log(e.orderBy); */
+            }
+            {
+              /* console.log(partnerStore?.userRoleId?.rider?.length); */
+            }
             const name = e.orderBy["firstName"] + " " + e.orderBy["lastName"];
 
             return (
               <div>
                 <Card
+                  key={key}
                   imgSrc={`${BASE_URL}${e.mealId["photoUrl"]}`}
                   imgAlt={e.mealId["photoUrl"]}
                   mealName={e.mealId["name"]}
@@ -154,7 +158,7 @@ export default function PartnerDashboardPage() {
                         console.log(error);
                         alert(
                           error?.response?.data?.error ||
-                            "Something went wrong!",
+                            "Something went wrong!"
                         );
                       });
                     // console.log("accept req", sendData);
@@ -174,12 +178,13 @@ export default function PartnerDashboardPage() {
           partnerStore?.userRoleId?.riders?.length ? "row" : ""
         }`}
       >
-      {console.log(partnerStore)}
+        {console.log(partnerStore)}
         {partnerStore?.userRoleId?.riders?.length ? (
-          partnerStore?.userRoleId?.riders?.map((e) => {
+          partnerStore?.userRoleId?.riders?.map((e, key) => {
             return (
               <div>
                 <Circle
+                  key={key}
                   imgSrc={`${BASE_URL}${e.photoUrl}`}
                   imgAlt={e.photoUrl}
                   riderName={e.firstName}
@@ -198,10 +203,11 @@ export default function PartnerDashboardPage() {
           <div className="noDataFound">No Data Found</div>
         ) : (
           <>
-            {orderHistory?.map((e) => {
+            {orderHistory?.map((e, key) => {
               return (
                 <>
                   <Order
+                    key={key}
                     imgSrc={`${BASE_URL}${e.mealId["photoUrl"]}`}
                     imgAlt={e?.mealId["photoUrl"]}
                     mealName={e?.mealId["name"]}

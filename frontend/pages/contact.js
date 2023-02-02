@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import Styles  from  '../styles/contact.module.css'
 
 export default function contact() {
@@ -12,7 +13,7 @@ export default function contact() {
   <div className={`${Styles.container}`}>
     <div className={`${Styles.row}`}>
       <div className={`${Styles.column}`}>
-        <img src="/icons/fooddonate.jpg" style={{width: '80%'}} />
+        <Image src="/icons/fooddonate.jpg" style={{width: '80%'}} />
       </div>
       <div className={`${Styles.column}`}>
         <form>
@@ -79,7 +80,7 @@ export default function contact() {
             <option value="CD">Congo, Democratic Republic of the Congo</option>
             <option value="CK">Cook Islands</option>
             <option value="CR">Costa Rica</option>
-            <option value="CI">Cote D'Ivoire</option>
+            <option value="CI">Cote DIvoire</option>
             <option value="HR">Croatia</option>
             <option value="CU">Cuba</option>
             <option value="CW">Curacao</option>
@@ -142,12 +143,12 @@ export default function contact() {
             <option value="KZ">Kazakhstan</option>
             <option value="KE">Kenya</option>
             <option value="KI">Kiribati</option>
-            <option value="KP">Korea, Democratic People's Republic of</option>
+            <option value="KP">Korea, Democratic Peoples Republic of</option>
             <option value="KR">Korea, Republic of</option>
             <option value="XK">Kosovo</option>
             <option value="KW">Kuwait</option>
             <option value="KG">Kyrgyzstan</option>
-            <option value="LA">Lao People's Democratic Republic</option>
+            <option value="LA">Lao Peoples Democratic Republic</option>
             <option value="LV">Latvia</option>
             <option value="LB">Lebanon</option>
             <option value="LS">Lesotho</option>

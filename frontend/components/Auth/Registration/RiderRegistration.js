@@ -422,12 +422,12 @@ const RiderRegistration = () => {
               </div>
 
               <div className="gray-container">
-                {YourPartberDetails?.map((e) => {
+                {YourPartberDetails?.map((e,key) => {
                   {
                     /* console.log('address',e?.mealId?.partnerId?.address); */
                   }
                   return (
-                    <div className="partner-card-holder">
+                    <div className="partner-card-holder" key={key}>
                       <button
                         type="button"
                         className="selector-button-overlay"

@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import  Styles  from '../styles/about.module.css'
 
 export default function about() {
@@ -13,7 +14,7 @@ export default function about() {
     <div className={`${Styles.row}`}>
       <div className={`${Styles.left}`}>
         <h1 className={`${Styles.R2}`}>Who we are</h1>
-        <img src="/icons/fooddonate.jpg" alt className="image" />
+        <Image  src="/icons/fooddonate.jpg" alt="fooddonate.jpg" className="image" />
       </div>
       <div className={`${Styles.right}`}>
         <div className={`${Styles.card}`}>
