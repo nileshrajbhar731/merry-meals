@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Cards | By Code Info</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        display: flex;
+        width: 920px;
+      }
+      .card {
+        width: 32%;
+        height: auto;
+        border: 1px solid #ccc;
+        margin-right: 1%;
+        background: white;
+        border-radius: 10px;
+        transition: 0.9;
+      }
+      .card:hover {
+        box-shadow: 0 0 11px rgba(33, 33, 33, 0.5);
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      strong,
+      h3,
+      p {
+        font-size: 20px;
+        padding: 0px 0px;
+
+        margin: 12px;
+        color: rgb(104, 92, 92);
+      }
+
+      .card .list {
+        display: flex;
+      }
+      .card .list li {
+        list-style: none;
+        margin: 10px;
+      }
+
+      .btn {
+        display: flex;
+        padding: 10px 12px;
+        border: 1px solid;
+        margin: 12px;
+        border-radius: 5px;
+        box-sizing: border-card;
+        background-color: rgb(114, 239, 114);
+        text-align: center;
+        transition: all 0.2s;
+      }
+
+      @media all and (max-width: 30em) {
+        .btn {
+          display: block;
+          margin: 0.4em auto;
+        }
+      }
+      @media (max-width: 800px) {
+        .container {
+          width: 100%;
+        }
+      }
+      @media (max-width: 600px) {
+        .container {
+          width: 85%;
+          display: block;
+        }
+        .card {
+          width: 100%;
+          margin-bottom: 4%;
+        }
+      }
+      .row {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        justify-content: space-between;
+      }
+      .row i {
+        font-size: 110%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="row">
+          <div>
+            <h3>ToTal Donations</h3>
+          </div>
+          <div style="margin-right: 20%">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <strong
+              ><i class="fa-solid fa-indian-rupee-sign"></i> 50.01k</strong
+            >
+          </div>
+          <div>
+            <p>updated 1 min ago</p>
+          </div>
+        </div>
+        <p>+2.1k than last month</p>
+      </div>
+    </div>
+
+    <div>
+      
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Cards | By Code Info</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        display: flex;
+        width: 920px;
+      }
+      .card {
+        width: 32%;
+        height: auto;
+        border: 1px solid #ccc;
+        margin-right: 1%;
+        background: white;
+        border-radius: 10px;
+        transition: 0.9;
+      }
+      .card:hover {
+        box-shadow: 0 0 11px rgba(33, 33, 33, 0.5);
+        cursor: pointer;
+      }
+      img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      h3,
+      p {
+        font-size: 15px;
+        padding: 0px 0px;
+
+        margin: 12px;
+        color: rgb(104, 92, 92);
+      }
+
+      .card .list {
+        display: flex;
+      }
+      .card .list li {
+        list-style: none;
+        margin: 10px;
+      }
+
+      .btn {
+        display: flex;
+        padding: 10px 12px;
+        border: 1px solid;
+        margin: 12px;
+        border-radius: 5px;
+        box-sizing: border-card;
+        background-color: rgb(114, 239, 114);
+        text-align: center;
+        transition: all 0.2s;
+      }
+
+      @media all and (max-width: 30em) {
+        .btn {
+          display: block;
+          margin: 0.4em auto;
+        }
+      }
+      @media (max-width: 800px) {
+        .container {
+          width: 100%;
+        }
+      }
+      @media (max-width: 600px) {
+        .container {
+          width: 85%;
+          display: block;
+        }
+        .card {
+          width: 100%;
+          margin-bottom: 4%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="https://www.w3schools.com/howto/img_avatar2.png" />
+        <h3>Invesment</h3>
+        <p>Xyz Fundattion</p>
+        <div class="list">
+            <li>Roti</li>
+            <li>Roti</li>
+            <li>Roti</li>
+            <li>Roti</li>
+        </div>
+        <button class="btn">Select Meal</button>
+      </div>
+      
+    </div>
+    
+  </body>
+  
+</html>

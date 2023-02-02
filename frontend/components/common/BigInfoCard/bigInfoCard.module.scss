@@ -1,0 +1,80 @@
+@import "../../../styles/base.scss";
+.container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  width: 60rem;
+  height: 10rem;
+
+  padding: 2rem;
+  // height: 35vh;
+
+  background: $bg-secondary;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 150ms linear;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:focus{
+    border: 1px solid green!important;
+  }
+
+  .selected{
+    border: 10px solid greenyellow!important;
+  }
+  
+
+  .card {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 100%;
+      
+    }
+  }
+
+  .cardcenter {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    h3{
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: normal;
+    }
+    p{
+      margin: 0;
+    }
+    .verificationStatus {
+      color: $green;
+    }
+  }
+ 
+  .btnMain {
+    width: 10%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    svg{
+     font-size: 2rem; 
+    }
+  }
+}
+

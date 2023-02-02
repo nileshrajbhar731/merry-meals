@@ -1,0 +1,319 @@
+@import "../../styles/base.scss";
+
+// ----------- Progress ------------
+$circleSize: 3rem;
+.progress_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.prog_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+}
+
+.prog_main {
+  width: $circleSize;
+  height: $circleSize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: $bg-disabled;
+  color: white;
+  transition: all 150ms ease-in-out;
+}
+
+.prog_main.prog_active {
+  background-color: $primary;
+}
+
+.prog_title {
+  color: $text-color-secondary;
+  text-align: center;
+}
+
+.prog_title_disabled {
+  // opacity: 0;
+}
+
+.connector {
+  position: relative;
+  width: 20rem;
+}
+
+.prog_body span {
+  width: 50%;
+  height: 3px;
+  position: absolute;
+  top: calc($circleSize / 2);
+  transition: all 150ms ease-in-out;
+}
+
+.connector_1 {
+  left: 0;
+}
+
+.connector_2 {
+  right: 0;
+}
+
+.connector_active {
+  background-color: $primary;
+}
+
+.connector_inactive {
+  background-color: $bg-disabled;
+}
+
+//----------Registration------------
+.reg_container {
+}
+
+.reg_head {
+  margin: 2rem 0;
+}
+
+.reg_title {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.reg_subtitle {
+  text-align: center;
+  // font-size: 20px;
+}
+
+.form_container {
+  margin: auto 50px;
+  // width: 80rem;
+  padding: 1rem 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form_row {
+  display: flex;
+  gap: 10%;
+}
+
+.form_grp {
+  width: 50%;
+  display: flex;
+  gap: 1rem;
+  // flex-direction: column;
+  position: relative;
+  margin-top: 1.5rem;
+  // justify-content: space-evenly;
+  justify-content: flex-start;
+}
+
+.form_grp_full {
+  width: 100%;
+  height: auto;
+  // flex-direction: column;
+}
+
+.form_grp_disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.form_grp div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form_grp input[type="checkbox"] {
+  width: 1.2rem;
+}
+
+.form_grp input[type="radio"] {
+  width: 1.2rem;
+}
+
+.form_grp input[type="file"] {
+  border: 1px solid rgb(78, 78, 78);
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
+.upload_icon {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 0.9rem;
+  right: 1rem;
+}
+
+.form_grp input[type="file"]::-webkit-file-upload-button {
+  display: none;
+}
+
+.form_grp_justifyCenter {
+  justify-content: center;
+}
+
+.form_grp input,
+.form_grp input[type="file"],
+.form_grp select,
+.form_grp textarea {
+  height: 3rem;
+  padding-left: 0.5rem;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgb(121, 121, 121);
+}
+
+.form_grp label {
+  position: absolute;
+  top: 0.9rem;
+  left: 1.4rem;
+  transition: 250ms;
+  background: #fff;
+}
+
+.form_grp input:focus + label,
+.form_grp input:not(:placeholder-shown) + label {
+  top: -0.7rem;
+  left: 0.8rem;
+}
+
+.select + label {
+  top: -0.7rem;
+  left: 0.8rem;
+}
+
+.btn_container {
+  display: flex;
+  // border: solid;
+  // width: 19rem;
+  margin: auto;
+  gap: 3rem;
+}
+
+.btn {
+  display: inline-flex;
+  width: 9rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgb(192, 192, 192);
+  // border: solid;
+
+  &.btnShort {
+    height: auto;
+    width: auto;
+    padding: 5px 20px;
+  }
+}
+
+.btn:hover {
+  background-color: rgb(209, 209, 209);
+}
+
+.btn_success {
+  color: $white;
+  background: $primary;
+}
+
+.btn_success:hover {
+  background: $primary-hover;
+}
+
+.btn_ghost {
+}
+
+.add_btn {
+  background: $primary;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 3rem;
+  width: 3rem;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #fff !important;
+  padding: 1rem;
+  cursor: pointer;
+}
+.add_btn:hover {
+  background-color: $primary-hover;
+}
+
+.select {
+  padding: 0 !important;
+  padding-left: 0.5rem !important;
+  margin: 0;
+}
+
+.item_list_container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.item {
+  width: auto;
+  height: 2.5rem;
+  border-radius: 10px;
+  padding: 0.3rem 0.6rem;
+  background-color: rgba(0, 0, 0, 0.472);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem !important;
+}
+.item button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.remove_icon {
+  cursor: pointer;
+  transition: all 100ms linear;
+  transform-origin: center;
+}
+.remove_icon:hover {
+  transform: scale(105%);
+}
+
+.flex_column {
+  flex-direction: column;
+}
+
+.justify_end {
+  justify-content: end;
+}
+
+.add_member_btn {
+  background-color: transparent;
+  border: none;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.text-center {
+  width: 100%;
+  text-align: center;
+}

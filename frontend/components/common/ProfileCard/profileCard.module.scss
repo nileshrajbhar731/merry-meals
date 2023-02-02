@@ -1,0 +1,65 @@
+@import "../../../styles/base.scss";
+
+// .row {
+//   // display: flex;
+//   // width: 20vw;
+//   margin: 20px;
+// // column-gap: 5px;
+// }
+
+.container {
+  width: 15vw;
+  height: 32vh;
+  border: solid;
+  margin-top: 8%;
+  margin-right: 2%;
+  border-radius: 10px;
+}
+
+.img {
+  /* border-radius: 50px; */
+  margin-top: -40%;
+  width: 80%;
+  height: 70%;
+  margin-left: 10%;
+}
+
+.img img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+/*  */
+.userName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userNameMain {
+  text-align: center;
+}
+
+/*  */
+
+.btnClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnMain {
+  padding: 15px;
+}
+
+.btn {
+  display: flex;
+  padding: 10px 12px;
+  border: 1px solid;
+  /* margin: 55px 0px 0px 5px; */
+  border-radius: 5px;
+  box-sizing: border-card;
+  background-color: rgb(114, 239, 114);
+  text-align: center;
+  transition: all 0.2s;
+}
