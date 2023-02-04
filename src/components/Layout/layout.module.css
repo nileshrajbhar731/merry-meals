@@ -1,0 +1,320 @@
+@import "../../styles/base.css";
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,800);
+
+.appContainer {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 20px;
+
+}
+.appContainer footer {
+  position: fixed;
+  bottom: 0px;
+
+  width: 100%;
+  padding: 5px;
+
+  background-color: var(--neutral);
+  text-align: center;
+}
+.headerContainer {
+  height: 120px;
+}
+
+.container {
+    border-bottom: 0.1px solid rgba(187, 187, 187, 0.342);
+}
+.container .main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .main .btn {
+    background-color: var(--light-yellow);
+    padding: 5px 20px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.container .main .row {
+    display: flex;
+}
+.container .main .row .phone {
+    display: flex;
+    justify-content: center;
+    border-right: solid;
+    padding-right: 10px;
+}
+.container .main .row .phone img {
+    width: 15px;
+    margin: 2px 10px;
+}
+.container .main .row .mail {
+    display: flex;
+    justify-content: center;
+}
+.container .main .row .mail img {
+    width: 15px;
+    margin: 2px 10px;
+}
+
+
+.container_main {
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    padding: 10px;
+}
+.container_main .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.container_main .logo img {
+    width: 120px;
+}
+.container_main .logo .nav {
+    display: flex;
+    justify-content: space-around;
+}
+.container_main .logo .nav .list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+.container_main .logo .nav .list li {
+    list-style: none;
+    margin: 5px;
+}
+.container_main .logo .nav .list .active {
+    text-decoration: underline;
+}
+.container_main .logo .nav .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: auto 10px;
+}
+.container_main .logo .nav .profile .profileImg {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.container_main .logo .nav .profile .profileImg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.conatiner_popup {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.conatiner_popup::before {
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.8;
+}
+.container_main_popup {
+    position: relative;
+}
+.container_main_popup .btn_main {
+    background-color: var(--neutral);
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5px;
+    width: 5px;
+    z-index: 2;
+    border-radius: 50%;
+    padding: 15px;
+    border: none;
+}
+
+figure.snip0045 {
+  font-family: "Raleway", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 410px;
+  max-width: 560px;
+  width: 100%;
+  background: #ffffff;
+  color: #000000;
+}
+figure.snip0045 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0045 > img {
+  width: 50%;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  -webkit-transform: scale(1.6);
+  transform: scale(1.6);
+  position: relative;
+  left: -15%;
+  z-index: 1;
+
+  min-height: 200px;
+}
+figure.snip0045 figcaption {
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  width: 50%;
+}
+figure.snip0045 figcaption h2,
+figure.snip0045 figcaption p {
+  margin: 0;
+  text-align: right;
+  padding: 10px 0;
+  width: 100%;
+}
+figure.snip0045 figcaption h2 {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+figure.snip0045 figcaption h2 span {
+  font-weight: 800;
+}
+figure.snip0045 figcaption p {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+figure.snip0045 figcaption .icons {
+  width: 100%;
+  text-align: right;
+}
+figure.snip0045 figcaption .icons i {
+  font-size: 26px;
+  padding: 5px;
+  top: 50%;
+  color: #000000;
+}
+figure.snip0045 figcaption a {
+  opacity: 0.3;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0045 figcaption a:hover {
+  opacity: 0.8;
+}
+figure.snip0045 .position {
+  width: 100%;
+  text-align: right;
+  padding: 15px 30px;
+  font-size: 0.9em;
+  opacity: 1;
+  font-style: italic;
+  color: #ffffff;
+  /* // background: #000000; */
+  background: #1e8449;
+}
+figure.snip0045.blue .position {
+  background: #20638f;
+}
+figure.snip0045.red .position {
+  background: #962d22;
+}
+figure.snip0045.yellow .position {
+  background: #bf6516;
+}
+figure.snip0045.green .position {
+  background: #1e8449;
+}
+figure.snip0045:hover > img,
+figure.snip0045.hover > img {
+  left: -12%;
+}
+
+/* // ----------------new--------------------- */
+.updateStatus {
+    display: flex;
+    justify-content: space-between;
+}
+.updateStatus div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+}
+.updateStatus button {
+    background-color: var(--primary);
+    border: none;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.form_grp {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    margin-top: 1.5rem;
+    justify-content: flex-start;
+}
+.form_grp input {
+    height: 2rem;
+    padding-left: 0.5rem;
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #797979;
+}
+.form_grp label {
+    position: absolute;
+    top: 0.9rem;
+    left: 1.4rem;
+    transition: 250ms;
+    background: #fff;
+}
+.form_grp input:focus + label, .form_grp input:not(:placeholder-shown) + label {
+    top: -0.7rem;
+    left: 0.8rem;
+}
+.select + label {
+    top: -0.7rem;
+    left: 0.8rem;
+}
+.btn_red {
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+}
+.btn_green {
+    padding: 5px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.btn_update {
+    padding: 5px;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}

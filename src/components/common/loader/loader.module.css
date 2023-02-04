@@ -1,0 +1,14 @@
+.loader{
+    display: grid;
+    place-content: center;
+    background-color: rgba(255, 255, 255,0.8);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.img_loader{
+    width: 100%;
+}

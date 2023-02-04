@@ -1,0 +1,91 @@
+@import "../../../styles/base.css";
+ .container {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 gap: 20px;
+	 border-radius: 10px;
+	 margin: 15px;
+	 box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+	 transition: all 150ms linear;
+	 padding: 20px 10px;
+	 width: 70vw;
+}
+ .container:hover {
+	 transform: translateY(-1px);
+}
+ .card {
+	 margin-right: 1%;
+	 padding: 20px 0px 20px 20px;
+	 transition: 0.9;
+	 width: 150px;
+}
+ .card .card:hover {
+	 box-shadow: 0 0 11px rgba(33, 33, 33, 0.5);
+	 cursor: pointer;
+}
+ .card img {
+	 max-width: 100%;
+	 height: 100%;
+	 object-fit: contain;
+	 border-radius: 10px;
+}
+ .card h3, .card p {
+	 font-size: 15px;
+	 padding: 0px 0px;
+	 margin: 12px;
+	 color: #685c5c;
+}
+ .cardcenter {
+	/* padding: 25px 0px 0px 0px;
+	 */
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex: 1;
+}
+ .center {
+	 justify-content: center;
+	 align-items: center;
+	 border-right: 0.5px solid var(--text-color-secondary);
+	 padding-right: 15rem;
+	 width: 100%;
+}
+ .card .list {
+	 display: flex;
+}
+ .card .list li {
+	 list-style: none;
+	 margin: 10px;
+}
+ .btnClass {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 text-align: center;
+}
+ .btnMain {
+	 padding: 15px;
+}
+ .btnMain p {
+	 text-align: center;
+}
+ .btnMain span {
+	 font-size: 14px;
+	 color: var(--neutral);
+}
+ .btn {
+	 display: flex;
+	 padding: 10px 12px;
+	 border: 1px solid;
+	/* margin: 55px 0px 0px 5px;
+	 */
+	 border-radius: 5px;
+	 box-sizing: border-card;
+	 background-color: #72ef72;
+	 text-align: center;
+	 transition: all 0.2s;
+	 cursor: pointer;
+	 margin-bottom: 10px;
+}
+ 

@@ -1,0 +1,25 @@
+:root {
+    --bg-primary: #b6e3ce61;
+    --bg-light: #ddf1df;
+    --bg-secondary: #e3f2f5;
+    --bg-error: #eedfdf;
+    --bg-disabled: #bababa;
+    --bg-hot: #ff7b004f;
+    --bg-cold: #10d3ff2f;
+    
+    --primary: #53bba2;
+    --secondary: #12633d;
+    --neutral: #b7b7b7;
+    
+    --primary-hover: #5cc6ad;
+    --green: #53bba2;
+    
+    --text-color-primary: #1e1e1e;
+    --text-color-secondary: #5c5c5c;
+    --text-color-success: #3b962c;
+    --text-color-error: #f21717;
+    
+    --white: #fafafa;
+    --light-yellow: #ffcb3c;
+    --circleSize: 3rem;
+  }
