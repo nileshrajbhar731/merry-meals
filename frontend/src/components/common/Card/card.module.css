@@ -1,0 +1,92 @@
+@import "../../../styles/base.css";
+ .card {
+	 width: 18rem;
+	 height: auto;
+	 background-color: var(--bg-secondary);
+	 border-radius: 10px 10px 0 0;
+	 transition: 250ms;
+}
+ .card p {
+	 font-size: 15px;
+	 padding: 0px 0px;
+	 color: #685c5c;
+}
+ .card:hover {
+	 transform: translateY(-5px);
+}
+ .card .imgContainer {
+	 height: 120px;
+	 background-color: var(--bg-primary);
+}
+ .card .imgContainer img {
+	 width: 100%;
+	 height: 100%;
+	 object-fit: contain;
+}
+ .main {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: flex-start;
+	 align-items: flex-start;
+	 padding: 1.5rem;
+	 gap: 1rem;
+	 margin-top: -5px;
+}
+ .main img {
+	 width: 45px;
+	 margin-right: 20px;
+}
+ .cardHeader {
+	 width: 100%;
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+}
+ .cardHeader div {
+	 display: flex;
+	 flex-direction: column;
+	 gap: 0.3rem;
+}
+ .cardHeader div h3 {
+	 margin: 0;
+	 font-size: 1.3rem;
+	 font-weight: normal;
+}
+ .cardHeader div p {
+	 margin: 0;
+	 font-size: 1.1rem;
+}
+ .cardHeader .mealTypeImg {
+	 width: 2rem;
+	 height: 3rem;
+}
+ .card .list {
+	 display: flex;
+	 gap: 1.3rem;
+	 margin-left: 1rem;
+}
+ .card .list p {
+	 list-style: none;
+	 position: relative;
+}
+ .card .list p::before {
+	 content: "";
+	 position: absolute;
+	 top: 50%;
+	 left: -12px;
+	 transform: translateY(-50%);
+	 display: block;
+	 height: 8px;
+	 width: 8px;
+	 border-radius: 50%;
+	 background-color: var(--primary);
+}
+ .btn {
+	 margin: 0 !important;
+}
+ .btn:disabled {
+	 background-color: var(--bg-disabled);
+	 color: var(--text-color-secondary);
+	 cursor: no-drop;
+}
+ 

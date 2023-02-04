@@ -1,0 +1,97 @@
+@import "../../../styles/base.css";
+ .container {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 width: 70vw;
+	 gap: 20px;
+	 border-radius: 10px;
+	 border: 1px solid var(--primary);
+	 padding: 20px;
+}
+ .container .orderStatus {
+	 font-size: 14px;
+	 color: var(--neutral);
+}
+ .container p, .container h3 {
+	 margin: 3px;
+}
+ .card {
+	 width: 80px;
+	 transition: 0.9;
+}
+ .card .card:hover {
+	 box-shadow: 0 0 11px rgba(33, 33, 33, 0.5);
+	 cursor: pointer;
+}
+ .card img {
+	 width: 100%;
+	 border-radius: 10px;
+}
+ .cardcenter {
+	/* padding: 25px 0px 0px 0px;
+	 */
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	/* padding: 20px;
+	 */
+	 flex: 1;
+}
+ .center {
+	 width: 100%;
+	 justify-content: center;
+	/* height: 20px;
+	 */
+	 align-items: center;
+	 border-right: solid;
+}
+ .card .list {
+	 display: flex;
+}
+ .card .list li {
+	 list-style: none;
+	 margin: 10px;
+}
+ .btnClass {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .btnMain {
+	 padding: 10px;
+}
+ .btn {
+	 display: flex;
+	 padding: 10px 12px;
+	 border: 1px solid;
+	/* margin: 55px 0px 0px 5px;
+	 */
+	 border-radius: 5px;
+	 box-sizing: border-card;
+	 background-color: #72ef72;
+	 text-align: center;
+	 transition: all 0.2s;
+}
+ @media all and (max-width: 30em) {
+	 .btn {
+		 display: block;
+		 margin: 0.4em auto;
+	}
+}
+ @media (max-width: 800px) {
+	 .container {
+		 width: 100%;
+	}
+}
+ @media (max-width: 600px) {
+	 .container {
+		 width: 85%;
+		 display: block;
+	}
+	 .card {
+		 width: 100%;
+		 margin-bottom: 4%;
+	}
+}
+ 
